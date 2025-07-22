@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Lens</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="grid.css">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.7/build/spline-viewer.js"></script>
+      <script src="https://unpkg.com/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;400&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+            <nav class="">
+                <div class="links">
+                    <a href="#">Home</a>
+                     <a href="#">Trending</a>
+                    <a href="/credits">Credits</a>
+                </div>
+            </nav>
+            <div class="main">
+                <div class="hero">
+                    <div class="left">
+                        <span>Explore the Unseen.<br> Right Around the Corner</span>
+                        <p>"Find local cafes, bookstores, and events that deserve your attention."</p>
+                        <button class="cta-btn">Start Exploring</button>
+                    </div>
+                    <div class="right">
+                        <spline-viewer url="https://prod.spline.design/LX5OMQXsHlZsWSSn/scene.splinecode"></spline-viewer>
+                    </div>
+                </div>
+                    
+            </div>
+            <div class="gridmain">
+  <div class="gridhead">
+    <h2>Your Local Discovery Map</h2>
+    <p>Click on any location to discover what makes it special</p>
+  </div>
+<div class="legend">
+  <div class="thing">
+    <img src="logos/coffee.svg" alt="">
+    <span class="ltext">Cafes</span>
+  </div>
+  <div class="thing">
+    <img src="logos/book-open (1).svg" alt="">
+    <span class="ltext">Library</span>
+  </div>
+  <div class="thing">
+    <img src="logos/calendar.svg" alt="">
+    <span class="ltext">Events</span>
+  </div>
+</div>
+  <div class="grid">
+  <div class="grid-bg"></div>
+  <div class="lx"></div>
+  <div class="ly"></div>
+  <div class="location1" style="left: 30%; top: 40%;" onclick="selectLocation('Cafe Latte')">
+    <div class="pulse"></div>
+    <div class="dotieeeee">
+      <div class=" done"><img src="logos/coffee.svg"></div>
+    </div>
+    <div class="locname">Cafe Latte</div>
+  </div>
+  <div class="location1" style="left: 70%; top: 60%;" onclick="selectLocation('Old Bookstore')">
+    <div class="pulse"></div>
+    <div class="dotieeeee">
+      <div class="icond"><img src="logos/book-open (1).svg"></div>
+    </div>
+    <div class="locname">Old Bookstore</div>
+  </div>
+  <div class="location1" style="left: 50%; top: 20%;" onclick="selectLocation('Community Hall')">
+    <div class="pulse"></div>
+    <div class="dotieeeee">
+      <div class="icond"><img src="logos/calendar.svg"></div>
+    </div>
+    <div class="locname">Community Hall2</div>
+  </div>
+    <div class="location1" style="left: 50%; top: 50%;" onclick="selectLocation('Community Hall')">
+    <div class="dotieeeee">
+      <div class="iconyou"></div>
+    </div>
+    <div class="locname">You</div>
+  </div>
+  <div class="cpark">   
+    <div class="cptext">Cornought Place</div>
+  </div>
+</div>
+</div>
+<script src="main.js"></script>
+  <script>
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smooth: true
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  </script>
+</body>
+</html>

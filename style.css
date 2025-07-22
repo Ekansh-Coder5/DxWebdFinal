@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+  font-family: 'Tanker';
+  src: url(NexaBold.otf);
+}
+
+:root{
+    --bg: #808080;
+    --text: #020000;
+}
+body{
+    color: var(--text) ;
+    font-family:  'Tanker', sans-serif;
+    margin: 0;
+  /*  background-color: var(--bg) ;*/
+background: #f8f4ec;
+
+    overflow-x: hidden;
+}
+
+nav{
+  width: 100vw;
+    height: 10vh;
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.links{
+  background: transparent;
+    border: 1px solid var(--bg);
+    backdrop-filter: blur(5px);
+    display: flex
+;
+    align-items: center;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    gap: 1.7rem;
+    padding: .4rem;
+}
+.links>a{
+  font-size: 1.1em;
+    cursor: pointer;
+    display: flex
+;
+  font-family: 'Inter';
+    justify-content: center;
+    align-items: center;
+    padding: 1.1vh;
+    color: black ;
+    text-decoration: none;
+    border-radius: .7rem;
+      transition: all .1s;
+}
+.links>a:hover{
+  background: #ff9053;
+  color: white;
+}
+.navbar{
+    display: flex;
+background: transparent;
+padding: 5vh 5rem;
+position: fixed;
+width: 100dvw;
+margin-left: 1%;
+}
+.navbar>span{
+
+color: var(--text);
+
+font-style: normal;
+
+line-height: normal;
+}
+.logo{
+    cursor: pointer;
+    font-weight: 1000;
+    font-size: 1.3vw;
+    width: 30%;
+    margin-right: -50px;
+
+}
+
+.links>span{
+        cursor: pointer;
+}
+.main{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+/*background: linear-gradient(white, var(--bg)) ;*/
+
+}
+.hero{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    height: 100%;
+    width: 40%;
+
+}
+.btnn{
+
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left>span{
+
+    font-size:calc(2vw + 2rem);
+    font-weight: 1000;
+}
+.left>p{
+    font-size: 1.2rem;
+    margin-top:2rem;
+}
+spline-viewer {
+    pointer-events: all;
+
+    left: 0; 
+    z-index: 0;
+    top: 2rem;
+    transform: scale(1);
+    max-height: 990dvh;
+    max-width: 50dvw;
+    z-index: 11100;
+    pointer-events: none;
+    filter: invert(100%);
+    }
+
+.right{
+    width: 50%;
+    overflow: visible;
+}
+.slanted-box {
+      font-weight: bold;
+        display: flex;
+      align-items: center;
+      justify-content: center;
+        margin-top: 4rem;
+      text-align: center;
+      aspect-ratio: 8;
+      height: 35px;
+      position: relative;
+      background: white;
+      color: black;
+      padding: 1.5rem 3rem;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 40%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    pointer-events: all;
+    }
+
+.startarrow {
+ /* filter: invert(100%);*/
+ transform: rotate(90deg);
+ margin-left: 1rem;
+       transition: all .1s;
+}  
+
+
+.graph {
+      position: relative;
+      width: 1000px;
+      height: 500px;
+      transform: scale(1.5);
+      margin-top: 100px;
+    }
+
+    .line {
+      position: absolute;
+      background-color: #979797;
+    }
+
+    .horijontal {
+      height: 2px;
+      width: 100%;
+      left: 0;
+    }
+
+    .x-axis,
+    .y-axis{
+        background-color: white;
+    }
+    .vertical {
+      width: 2px;
+      height: 100%;
+      top: 0;
+    }
+
+    .dot {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .green { background-color: limegreen; }
+    .red { background-color: red; }
+    .blue { background-color: lightskyblue; }
+
+
+    
+    .cta-btn {
+      margin-top: 1rem;
+      padding: 1.4rem 2.3rem;
+      font-size: 1rem;
+      font-weight: 600;
+      width: 70%;
+      border: none;
+      border-radius: 40px;
+      color: white;
+      background: #181818;
+      cursor: pointer;
+      box-shadow: 0 3px 24px 0 #0002;
+      transition: all .2s;
+    }
+
+
+
+.cta-btn:hover,
+.cta-btn:focus {
+      background: #433621;
+}
+.gridmain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding-top: 5rem;
+}
+    .grid {
+      position: relative;
+      background-color: #f9fafb;
+      border-radius: 24px;
+      padding: 2rem;
+      min-height: 600px;
+      overflow: hidden;
+      width: 80%;
+      font-family: 'Inter';
+    }
+
+    .grid-bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.2;
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: 2;
+    }
+
+    .lx,
+    .ly {
+      position: absolute;
+      background-color: #d1d5db;
+      opacity: 0.5;
+      z-index: 1;
+    }
+
+    .lx {
+      top: 50%;
+      left: 2rem;
+      right: 2rem;
+      height: 1px;
+    }
+
+    .ly {
+      left: 50%;
+      top: 2rem;
+      bottom: 2rem;
+      width: 1px;
+    }
+
+    .location1 {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .pulse {
+      position: absolute;
+      inset: 0;
+      background-color: #60a5fa;
+      border-radius: 9999px;
+      animation: ping 1s infinite;
+      opacity: 0.3;
+    }
+
+    @keyframes ping {
+      0% {
+        transform: scale(1);
+        opacity: 0.3;
+      }
+      75% {
+        transform: scale(2);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+
+    .dotieeeee {
+      position: relative;
+      background: white;
+      border-radius: 9999px;
+      padding: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border: 2px solid #bfdbfe;
+      transition: all 0.2s ease;
+      aspect-ratio: 1;
+      width: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .location1:hover .dotieeeee {
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .locname {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 8px;
+      background-color: #111827;
+      color: white;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .location1:hover .locname {
+      opacity: 1;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      background-color: #3b82f6;
+      border-radius: 50%;
+    }
+        .iconyou {
+      width: 20px;
+      height: 20px;
+      background-color: #3bf6a8;
+      border-radius: 50%;
+    }
+    .icond {
+      width: 25px;
+      height: 25px;
+      aspect-ratio: 1;
+      border-radius: 500%;
+    }
+    .gridhead {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .gridhead h2 {
+      margin-top: 1rem;
+      font-size: 4rem; 
+      font-weight: bold;
+      color: black; 
+      margin-bottom: 1.5rem;
+    }
+
+    .gridhead p {
+      font-size: 1.25rem; 
+      color: #4b5563;   
+      max-width: 42rem;   
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+      .cpark {
+      position: absolute;
+      bottom: 2rem;     
+      right: 2rem;      
+      width: 40%;      
+      height: 50%;     
+      background-color: #bbf7d0;  
+      border: 2px solid #86efac;  
+      border-radius: 0.5rem;      
+      opacity: 0.6;
+    }
+
+    .cptext {
+      color: #065f46;       
+      font-size: 0.75rem;   
+      font-weight: 500;     
+      padding: 0.5rem;      
+    }
+
+    .legend {
+  display: flex;
+  justify-content: center;
+
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.thing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.ltext {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151; 
+}
+
