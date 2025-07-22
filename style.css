@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @font-face {
-  font-family: 'Tanker';
+  font-family: 'NexaBold';
   src: url(NexaBold.otf);
 }
 
 :root{
     --bg: #808080;
     --text: #020000;
+    --buttons : #AF8F4F;
 }
 body{
     color: var(--text) ;
-    font-family:  'Tanker', sans-serif;
+    font-family:  'NexaBold', sans-serif;
     margin: 0;
   /*  background-color: var(--bg) ;*/
 background: #f8f4ec;
@@ -62,7 +63,7 @@ nav{
       transition: all .1s;
 }
 .links>a:hover{
-  background: #ff9053;
+  background: var(--buttons);
   color: white;
 }
 .navbar{
@@ -149,29 +150,7 @@ spline-viewer {
     width: 50%;
     overflow: visible;
 }
-.slanted-box {
-      font-weight: bold;
-        display: flex;
-      align-items: center;
-      justify-content: center;
-        margin-top: 4rem;
-      text-align: center;
-      aspect-ratio: 8;
-      height: 35px;
-      position: relative;
-      background: white;
-      color: black;
-      padding: 1.5rem 3rem;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.3rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      width: 40%;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 20px 100%, 0 calc(100% - 20px));
-    pointer-events: all;
-    }
+
 
 .startarrow {
  /* filter: invert(100%);*/
@@ -241,9 +220,8 @@ spline-viewer {
 
 
 
-.cta-btn:hover,
-.cta-btn:focus {
-      background: #433621;
+.cta-btn:hover {
+      background: var(--buttons);
 }
 .gridmain{
   display: flex;
@@ -401,7 +379,7 @@ spline-viewer {
     .gridhead p {
       font-size: 1.25rem; 
       color: #4b5563;   
-      max-width: 42rem;   
+      max-width: 42rem;    
       margin-left: auto;
       margin-right: auto;
     }
@@ -445,3 +423,165 @@ spline-viewer {
   color: #374151; 
 }
 
+
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+
+
+.cardphone {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  display: flex;
+  background-color: #fdfcf9;
+  border: 1px solid #e3dfd7;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  max-width: 800px;
+  margin: auto;  height: max-content  ; 
+  transition: all 0.3s ease;
+  flex-direction: column ;
+  z-index: 99909;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.2s;
+
+}
+
+.cardphone:hover {
+
+  box-shadow: 0 8px 14px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+.image {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.imagephone{
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.cardtext {
+  padding: 20px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardhead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardhead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon2 {
+  width: 20px;
+  height: 20px;
+}
+
+.cardhead h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+  font-size: 0.95rem;
+  color: black;
+  font-weight: 500;
+}
+.ratein{
+    color: black;
+    margin-top: .3rem;
+}
+
+.star {
+  font-size: 1.2rem;
+}
+
+.desc {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.details {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #6b7280;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.loct {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.loct > span{
+  margin-right: 1rem;
+}
+
+.locic > svg{
+  display: inline-block;
+}
+.hidden {
+  display: none;
+}
+
+@keyframes popupAppear {
+  0% {
+    transform:  translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+  }
+  60% {
+    transform:  translate(-50%, -50%) scale(1.05);
+    opacity: 1;
+  }
+  79% {
+    transform:  translate(-50%, -50%) scale(0.95);
+  }
+  100% {
+    transform:  translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+
+.show {
+  animation: popupAppear 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  z-index: 1000;
+}

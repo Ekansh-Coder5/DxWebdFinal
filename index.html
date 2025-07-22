@@ -10,6 +10,8 @@
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.7/build/spline-viewer.js"></script>
       <script src="https://unpkg.com/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;400&display=swap" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+
 
 
 
@@ -79,7 +81,7 @@
     </div>
     <div class="locname">Community Hall2</div>
   </div>
-    <div class="location1" style="left: 50%; top: 50%;" onclick="selectLocation('Community Hall')">
+    <div class="location1" style="left: 50%; top: 50%;" onclick="selectLocation('Its you silly :)')">
     <div class="dotieeeee">
       <div class="iconyou"></div>
     </div>
@@ -90,20 +92,34 @@
   </div>
 </div>
 </div>
+<!-- Daa Model -->
+ <div class="cardphone hidden" id="cpid">
+  <button class="close-button" onclick="closeModal()">×</button>
+  <div>
+  <img src="images/flowers.jpeg" class="imagephone">
+  </div>
+  <div class="cardtext">
+    <div class="cardhead">
+      <div class="cardhead">
+        <img src="logos/coffee.svg" class="icon2" >
+        <h3 id="headtext">Brew &amp; Books</h3>
+      </div>
+      <div class="rating">
+        <span class="star">★</span>
+        <span class="ratin">4.8</span>
+      </div>
+    </div>
+
+    <p class="desc" id="descid">
+      A cozy spot where coffee meets literature. Perfect for reading while sipping artisanal coffee.
+    </p>
+
+    <div class="details">
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>7:00 AM - 9:00 PM</p>
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10.22V21H3V10.22"/><path d="M7 21V12h10v9"/><path d="M12 12v-5a4 4 0 1 1 8 0v5"/></svg></span>123 Main St, Downtown</p>
+    </div>
+  </div>
+</div>
 <script src="main.js"></script>
-  <script>
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smooth: true
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  </script>
 </body>
 </html>
