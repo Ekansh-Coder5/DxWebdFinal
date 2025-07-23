@@ -14,24 +14,38 @@ function selectLocation(name) {
     const title = document.getElementById("headtext");
     const content = document.getElementById("descid");
     const modal = document.getElementById("cpid");
+    const time = document.getElementById("time");
+    const loc = document.getElementById("loc");
 
     title.textContent = name;
     modal.classList.remove("hidden");
     modal.classList.add("show");
-    if (name === "Cafe Latte") {
+    console.log(name)
+    if (name === "Cafe Pink Hauz Khas Village") {
       modal.setAttribute('data-id', 'c1');
       console.log(modal.getAttribute('data-id'));
-      content.textContent = "A cozy place known for its caramel brew and vintage vibe.";
-    } else if (name === "Old Bookstore") {
-      modal.setAttribute('data-id', 'c2');
-      content.textContent = "Home to rare finds and first editions. A paradise for readers.";
-    } else if (name === "Community Hall") {
+      content.textContent = "Cafe Pink in Hauz Khas Village offers a vibrant, Insta-worthy ambiance with eclectic decor and a chic menu perfect for casual hangouts.";
+      time.textContent = "10:00 AM - 10:00 PM";
+      loc.textContent = "Building no 21 Ground Floor, Hauz Khas Village";
+    } else if (name === "Dirty Good") {
       modal.setAttribute('data-id', 'c3');
-      content.textContent = "Events, meetings, and performances happen regularly here.";
+      content.textContent = "is a modern all‑day café and fine‑dining spot known for its wholesome smoothie bowls, creative continental dishes, cocktails and stylish leafy ambience";
+            time.textContent = "10:00 AM - 1:30 PM";
+      loc.textContent = "Within Block 3, One Golden Mile, Musical Fountain Park, Ground Floor, Block 7A and Block 7B, Shaheed Sudhir Tyagi Marg, Netaji Nagar, New Delhi, Delhi 110023";
+    } else if (name === "Travis Scott: Circus Maximus Stadium Tour - India") {
+      modal.setAttribute('data-id', 'c4');
+      content.textContent = "A visionary, a hitmaker, a cultural force—Travis Scott commands the global stage like no other!";
+      time.textContent = "--";
+      loc.textContent = "Jawaharlal Nehru Stadium, Pragati Vihar, New Delhi, Delhi 110003";
     } else if (name === "Its you silly :)") {
       content.textContent = "This is where you are! Explore your surroundings and discover hidden gems.";
       document.getElementById("cpid").classList.add("hidden");
     document.getElementById("cpid").classList.remove("show");
+    }else if (name === "Shalom / Laidback Cafe") {
+      modal.setAttribute('data-id', 'c2');
+      content.textContent = "It blends cozy elegance with Mediterranean vibes, offering gourmet dishes and a serene rooftop experience.";
+            time.textContent = "12:00 PM - 1:00 AM";
+      loc.textContent = "Sector 9, Rama Krishna Puram, New Delhi, Delhi 110022";
     }
       else {
       content.textContent = "Details coming soon.";
@@ -40,10 +54,6 @@ function selectLocation(name) {
     
   }
 
-  function closeModal() {
-    document.getElementById("cpid").classList.add("hidden");
-    document.getElementById("cpid").classList.remove("show");
-  }
   document.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
       closeModal();
@@ -97,13 +107,21 @@ gsap.from(".legend .thing", {
     toggleActions: "play none none none"
   }
 });
-
-
+var close = false;
+  function closeModal() {
+    close = true;
+    document.getElementById("cpid").classList.add("hidden");
+    document.getElementById("cpid").classList.remove("show");
+  }
 
 document.querySelectorAll('.cardphone').forEach(card => {
   card.addEventListener('click', function() {
+    if(!close){
     const cardId = card.getAttribute('data-id');
     console.log(cardId);
-    window.location.href = `/DxWebdFinal/page/${cardId}.html`;
+    window.location.href = `/DxWebdFinal/page/${cardId}.html`;}
+    close = !close;
   });
 });
+
+

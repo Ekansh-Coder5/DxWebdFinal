@@ -1,9 +1,4 @@
-  const imgs = [
-    "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80"
-  ];
+
 
   let currentIdx = 0;
   const firstimg = document.getElementById('firstimg');
@@ -57,10 +52,12 @@ sbtn.addEventListener('click', function () {
     console.log(` ${cardId} saved.`);
     sbtn.classList.add('clicked');
     sbtn.textContent = 'Saved';
+    toggled = true;
   } else {
     console.log(` ${cardId} saved yet.`);
     sbtn.classList.remove('clicked');
     sbtn.textContent = 'Save';
+    toggled = false;
   }
 
   sbtn.addEventListener('click', function () {
