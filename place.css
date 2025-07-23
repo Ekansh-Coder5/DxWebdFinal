@@ -93,8 +93,9 @@ nav{
   transition: all 0.3s ease;
   flex-direction: column ;
   min-width: 10vw;
-    animation: cardFadeIn 0.4s cubic-bezier(.4,0,.2,1);
-  transition: all .2s ease;
+    transition: all .2s ease;
+  opacity: 1;
+  transform:  translateY(20px);
 
 }
 
@@ -116,25 +117,7 @@ nav{
   object-fit: cover;
   cursor: zoom-in;
 }
-@media (max-width:850px) {
-  .card{
-      display: flex;
-  background-color: #fdfcf9;
-  border: 1px solid #e3dfd7;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-  max-width: 80vw;
-  margin: auto;  height: max-content  ; 
-  transition: all 0.3s ease;
-  flex-direction: column ;
-  }
-  .image{
-      width: 100%;
-  height: 80%;
-  object-fit: cover;
-  cursor: zoom-in;
-  }
-}
+
 .cardtext {
   padding: 20px 24px;
   flex: 1;
@@ -236,6 +219,7 @@ nav{
   flex-direction: column;
   align-items: center;
   padding-bottom:1rem;
+  overflow: hidden;
 }
 
 .btn {
@@ -249,8 +233,8 @@ nav{
   background:transparent;
   border: var(--buttons) 3px solid;
   transition: all 0.28s ease;
-  width: 8vw;
-  margin-right: 2rem;
+  width: fit-content;
+
 }
 .btn:hover {
   background-color: var(--buttons);
@@ -295,6 +279,17 @@ nav{
   opacity: 0.9;
 }
 
+.bsearch{
+  margin-right: 25px;
+  color: #a78244;
+  font-size: 1.9rem;
+  pointer-events: none;
+  border-width: 0px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(249, 246, 241);
+}
+
 .sicon {
   margin-left: 14px;
   color: #fff;
@@ -322,5 +317,28 @@ nav{
   to {
     opacity: 0;
     transform: translateY(20px) scale(0.98);
+  }
+}
+
+@media (max-width:850px) {
+  /* .card{
+      display: flex;
+  background-color: #fdfcf9;
+  border: 1px solid #e3dfd7;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  max-width: 80vw;
+  margin: auto;  height: max-content  ; 
+  transition: all 0.3s ease;
+  flex-direction: column ;
+  } */
+  .image{
+      width: 100%;
+  height: 80%;
+  object-fit: cover;
+  cursor: zoom-in;
+  }
+  .searchm input{
+    width: 30vw;
   }
 }

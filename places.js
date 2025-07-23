@@ -128,3 +128,17 @@ window.addEventListener('DOMContentLoaded', function() {
     card.setAttribute('data-saved', isSaved ? 'true' : 'false');
   });
 });
+
+  window.addEventListener("DOMContentLoaded", () => {
+  const tl = gsap.timeline();
+
+  tl.from(".searchm", { opacity: 0, y: 60, duration: 1, ease: "ease" })
+  .from(".cards", {
+  opacity: 0,
+  y: 20,
+  duration: 1.5,
+  ease: "power2.out"
+},"=-0.2");
+
+;
+});
