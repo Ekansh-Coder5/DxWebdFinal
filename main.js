@@ -16,6 +16,7 @@ function selectLocation(name) {
     const modal = document.getElementById("cpid");
     const time = document.getElementById("time");
     const loc = document.getElementById("loc");
+    const mimg = document.getElementById("mimg");
 
     title.textContent = name;
     modal.classList.remove("hidden");
@@ -27,16 +28,19 @@ function selectLocation(name) {
       content.textContent = "Cafe Pink in Hauz Khas Village offers a vibrant, Insta-worthy ambiance with eclectic decor and a chic menu perfect for casual hangouts.";
       time.textContent = "10:00 AM - 10:00 PM";
       loc.textContent = "Building no 21 Ground Floor, Hauz Khas Village";
+      mimg.src = "/images/c1/2022-09-19.webp";
     } else if (name === "Dirty Good") {
       modal.setAttribute('data-id', 'c3');
       content.textContent = "is a modern all‑day café and fine‑dining spot known for its wholesome smoothie bowls, creative continental dishes, cocktails and stylish leafy ambience";
             time.textContent = "10:00 AM - 1:30 PM";
       loc.textContent = "Within Block 3, One Golden Mile, Musical Fountain Park, Ground Floor, Block 7A and Block 7B, Shaheed Sudhir Tyagi Marg, Netaji Nagar, New Delhi, Delhi 110023";
+      mimg.src = "images/c3/Untitled-design-2022-11-21T080201.832.jpg"
     } else if (name === "Travis Scott: Circus Maximus Stadium Tour - India") {
       modal.setAttribute('data-id', 'c4');
       content.textContent = "A visionary, a hitmaker, a cultural force—Travis Scott commands the global stage like no other!";
       time.textContent = "--";
       loc.textContent = "Jawaharlal Nehru Stadium, Pragati Vihar, New Delhi, Delhi 110003";
+      mimg.src = "images/c4/images.jpeg";
     } else if (name === "Its you silly :)") {
       content.textContent = "This is where you are! Explore your surroundings and discover hidden gems.";
       document.getElementById("cpid").classList.add("hidden");
@@ -46,6 +50,7 @@ function selectLocation(name) {
       content.textContent = "It blends cozy elegance with Mediterranean vibes, offering gourmet dishes and a serene rooftop experience.";
             time.textContent = "12:00 PM - 1:00 AM";
       loc.textContent = "Sector 9, Rama Krishna Puram, New Delhi, Delhi 110022";
+      mimg.src = "images/c2/686bb9_c0f357fc0a7345b98d2bb3ee74199387~mv2.avif";
     }
       else {
       content.textContent = "Details coming soon.";

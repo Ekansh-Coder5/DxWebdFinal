@@ -480,6 +480,7 @@ spline-viewer {
   height: 80%;
   object-fit: cover;
   cursor: pointer;
+  height: 22rem;
 }
 .cardtext {
   padding: 20px 24px;
