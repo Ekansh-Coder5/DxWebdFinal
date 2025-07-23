@@ -113,7 +113,7 @@ document.querySelectorAll('.cardphone').forEach(card => {
   card.addEventListener('click', function() {
     const cardId = card.getAttribute('data-id');
     console.log(cardId);
-    window.location.href = `/page/${cardId}.html`;
+    window.location.href = `/DxWebdFinal/page/${cardId}.html`;
   });
 });
 
