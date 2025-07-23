@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cafe Card</title>
+  <link rel="stylesheet" href="place.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+
+
+
+</head>
+<body>
+<nav class="">
+<div class="links">
+    <a href="/">Home</a>
+     <a href="/places.html">Places</a>
+    <a href="/credits">Github</a>
+</div>
+            </nav>
+<div class="searchcont">
+  <div class="searchm">
+    <input type="text" placeholder="Search"  id="serchinput"/>
+    <button class="btn dir"  type="button" onclick="save()">Saved</button>
+    <span class="sicon"><img src="logos/search.svg"></span>
+  </div> 
+
+</div>
+
+<div class="cards"  data-id="c1">
+<!-- <div class="card" data-saved="false">
+  <img src="images/flowers.jpeg" alt="Cafe" class="image">
+
+  <div class="cardtext">
+    <div class="cardheader">
+      <div class="cardhead">
+        <img src="logos/coffee.svg" class="icon">
+        <h3>Brew &amp; Books</h3>
+      </div>
+      <div class="rating">
+        <span class="star">&#9733;★</span>
+        <span class="ratin">4.8</span>
+      </div>
+    </div>
+
+    <p class="desc">
+      A cozy spot where coffee meets literature. Perfect for reading while sipping artisanal coffee.
+    </p>
+
+    <div class="details">
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>7:00 AM - 9:00 PM</p>
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10.22V21H3V10.22"/><path d="M7 21V12h10v9"/><path d="M12 12v-5a4 4 0 1 1 8 0v5"/></svg></span>123 Main St, Downtown</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="card"  data-saved="true">
+  <img src="images/flowers.jpeg" alt="Cafe" class="image">
+
+  <div class="cardtext">
+    <div class="cardheader">
+      <div class="cardhead">
+        <img src="logos/coffee.svg" class="icon">
+        <h3>Cutus &amp; Books</h3>
+      </div>
+      <div class="rating">
+        <span class="star">&#9733;★</span>
+        <span class="ratin">4.8</span>
+      </div>
+    </div>
+
+    <p class="desc">
+      A cozy spot where coffee meets literature. Perfect for reading while sipping artisanal coffee.
+    </p>
+
+    <div class="details">
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>7:00 AM - 9:00 PM</p>
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10.22V21H3V10.22"/><path d="M7 21V12h10v9"/><path d="M12 12v-5a4 4 0 1 1 8 0v5"/></svg></span>123 Main St, Downtown</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="card"  data-id="c1" data-saved="false">
+  <img src="images/flowers.jpeg" alt="Cafe" class="image">
+
+  <div class="cardtext">
+    <div class="cardheader">
+      <div class="cardhead">
+        <img src="logos/coffee.svg" class="icon">
+        <h3>Brew &amp; Books</h3>
+      </div>
+      <div class="rating">
+        <span class="star">&#9733;★</span>
+        <span class="ratin">4.8</span>
+      </div>
+    </div>
+
+    <p class="desc">
+      A cozy spot where coffee meets literature. Perfect for reading while sipping artisanal coffee.
+    </p>
+
+    <div class="details">
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>7:00 AM - 9:00 PM</p>
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10.22V21H3V10.22"/><path d="M7 21V12h10v9"/><path d="M12 12v-5a4 4 0 1 1 8 0v5"/></svg></span>123 Main St, Downtown</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="card" data-saved="true">
+  <img src="images/flowers.jpeg" alt="Cafe" class="image">
+
+  <div class="cardtext">
+    <div class="cardheader">
+      <div class="cardhead">
+        <img src="logos/coffee.svg" class="icon">
+        <h3>Brew &amp; Hii</h3>
+      </div>
+      <div class="rating">
+        <span class="star">&#9733;★</span>
+        <span class="ratin">4.8</span>
+      </div>
+    </div>
+
+    <p class="desc">
+      A cozy spot where coffee meets literature. Perfect for reading while sipping artisanal coffee.
+    </p>
+
+    <div class="details">
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>7:00 AM - 9:00 PM</p>
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10.22V21H3V10.22"/><path d="M7 21V12h10v9"/><path d="M12 12v-5a4 4 0 1 1 8 0v5"/></svg></span>123 Main St, Downtown</p>
+    </div>
+  </div>
+</div> -->
+
+<div class="cardphone" data-id="c1">
+  <div>
+  <img src="images/flowers.jpeg" class="imagephone">
+  </div>
+  <div class="cardtext">
+    <div class="cardheader">
+      <div class="cardhead">
+        <img src="logos/coffee.svg" class="icon" alt="Coffee Icon">
+        <h3>Brew &amp; Books</h3>
+      </div>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="ratin">4.8</span>
+      </div>
+    </div>
+
+    <p class="desc">
+      A cozy spot where coffee meets literature. Perfect for reading while sipping artisanal coffee.
+    </p>
+
+    <div class="details">
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>7:00 AM - 9:00 PM</p>
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10.22V21H3V10.22"/><path d="M7 21V12h10v9"/><path d="M12 12v-5a4 4 0 1 1 8 0v5"/></svg></span>123 Main St, Downtown</p>
+    </div>
+  </div>
+</div>
+<div class="cardphone" data-id="c2">
+  <div>
+  <img src="images/flowers.jpeg" class="imagephone">
+  </div>
+  <div class="cardtext">
+    <div class="cardheader">
+      <div class="cardhead">
+        <img src="logos/coffee.svg" class="icon" alt="Coffee Icon">
+        <h3>Brew &amp; Books</h3>
+      </div>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="ratin">4.8</span>
+      </div>
+    </div>
+
+    <p class="desc">
+      A cozy spot where coffee meets literature. Perfect for reading while sipping artisanal coffee.
+    </p>
+
+    <div class="details">
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>7:00 AM - 9:00 PM</p>
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10.22V21H3V10.22"/><path d="M7 21V12h10v9"/><path d="M12 12v-5a4 4 0 1 1 8 0v5"/></svg></span>123 Main St, Downtown</p>
+    </div>
+  </div>
+</div>
+<div class="cardphone" data-id="c3">
+  <div>
+  <img src="images/flowers.jpeg" class="imagephone">
+  </div>
+  <div class="cardtext">
+    <div class="cardheader">
+      <div class="cardhead">
+        <img src="logos/coffee.svg" class="icon" alt="Coffee Icon">
+        <h3>Brew &amp; Books</h3>
+      </div>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="ratin">4.8</span>
+      </div>
+    </div>
+
+    <p class="desc">
+      A cozy spot where coffee meets literature. Perfect for reading while sipping artisanal coffee.
+    </p>
+
+    <div class="details">
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>7:00 AM - 9:00 PM</p>
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10.22V21H3V10.22"/><path d="M7 21V12h10v9"/><path d="M12 12v-5a4 4 0 1 1 8 0v5"/></svg></span>123 Main St, Downtown</p>
+    </div>
+  </div>
+</div>
+<div class="cardphone" data-id="c4">
+  <div>
+  <img src="images/flowers.jpeg" class="imagephone">
+  </div>
+  <div class="cardtext">
+    <div class="cardheader">
+      <div class="cardhead">
+        <img src="logos/coffee.svg" class="icon" alt="Coffee Icon">
+        <h3>Brew &amp; Books</h3>
+      </div>
+      <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="ratin">4.8</span>
+      </div>
+    </div>
+
+    <p class="desc">
+      A cozy spot where coffee meets literature. Perfect for reading while sipping artisanal coffee.
+    </p>
+
+    <div class="details">
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>7:00 AM - 9:00 PM</p>
+      <p class="loct"><span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10.22V21H3V10.22"/><path d="M7 21V12h10v9"/><path d="M12 12v-5a4 4 0 1 1 8 0v5"/></svg></span>123 Main St, Downtown</p>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>
+<script src="places.js"></script>
